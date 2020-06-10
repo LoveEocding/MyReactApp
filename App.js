@@ -7,9 +7,15 @@ export default class HelloWorldApp extends Component {
     return (
         <View style={{ flex: 1, justifyContent: "center", alignItems: "center",background:"red" }}>
           <Button 
-           title={"点击跳转FlatListDemo"}
+           title={"FlatListDemo"}
            onPress={()=>{
-              navigation.navigate('FlatListDemo')
+              navigation.navigate('FlatListDemo',{name:'动态标题'})
+           }}
+          />
+          <Button 
+           title={"SectionListDemo"}
+           onPress={()=>{
+              navigation.navigate('SectionListDemo',{name:'动态',mode:''})
            }}
           />
         </View>
